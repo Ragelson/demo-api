@@ -1,4 +1,4 @@
-
+﻿
 const express = require('express');
 const bodyParser = require('body-parser');
 const jwt = require('express-jwt');
@@ -104,6 +104,7 @@ try {
 
     app.post('/api/user/login', (req, res) => {
         const { email, password } = req.body
+	console.log(req.body)
 
         users.forEach((e, i) => {
             if ((e.email == email) & (e.password == password)) {
